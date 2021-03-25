@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Name: {{name}}</h3>
+    <h2>Team: {{team}}</h2>
+    <h2>Price: {{price}}</h2>
+    <h2>Image:</h2>
+    <img src={{image}} />
+    <button class="next" onclick="nextPlayer()">Next</button>
+    <button class="prev" onclick="prevPlayer()">Prev</button>
+    <script>
+        function nextPlayer() {
+            let id={{playerId}};
+            location.href=`http://localhost:8000/players/${id+1}`;
+        }
+        function prevPlayer(){
+            let id={{playerId}};
+            location.href=`http://localhost:8000/players/${id-1}`;
+        }
+    </script>
+</body>
+</html>
